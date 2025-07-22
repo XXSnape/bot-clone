@@ -2,7 +2,7 @@ from contextlib import suppress
 from pathlib import Path
 
 from aiogram.exceptions import TelegramAPIError
-from aiogram.types import Message, InlineKeyboardMarkup
+from aiogram.types import Message, InlineKeyboardMarkup, FSInputFile
 
 
 async def delete_message(message: Message) -> None:
@@ -23,3 +23,4 @@ async def edit_message_or_write_new(
 
 def get_fsinput_file(filename: str):
     path = Path(__file__).parent.parent / "files" / filename
+    return FSInputFile(path=path)

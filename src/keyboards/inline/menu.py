@@ -1,6 +1,10 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from .builder import generate_inline_kb
+from .common import get_common_buttons
+
+
+MENU_CB = "menu"
 
 
 def menu_kb() -> InlineKeyboardMarkup:
@@ -21,4 +25,5 @@ def menu_kb() -> InlineKeyboardMarkup:
     )
 
 
-MENU_CB = "menu"
+def go_to_menu_kb():
+    return generate_inline_kb(get_common_buttons(with_back=False))
