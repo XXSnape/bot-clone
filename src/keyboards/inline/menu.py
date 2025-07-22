@@ -11,7 +11,7 @@ def menu_kb() -> InlineKeyboardMarkup:
     return generate_inline_kb(
         [
             InlineKeyboardButton(text="1С", callback_data="1с"),
-            InlineKeyboardButton(text="Рекламации", callback_data="сomplaints"),
+            InlineKeyboardButton(text="Рекламации", callback_data="complaints"),
             InlineKeyboardButton(text="База знаний", callback_data="check"),
             InlineKeyboardButton(
                 text="Сервисное обслуживание оборудования", callback_data="service"
